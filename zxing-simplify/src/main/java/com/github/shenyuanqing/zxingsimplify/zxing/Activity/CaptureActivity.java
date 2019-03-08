@@ -71,6 +71,7 @@ import java.nio.charset.Charset;
 import java.util.Hashtable;
 
 public class CaptureActivity extends Activity implements SurfaceHolder.Callback {
+    public static final String SCAN_RESULT = "scan_result"
     private Context context;
     private Activity activity;
     private static final String TAG = CaptureActivity.class.getSimpleName();
@@ -285,7 +286,7 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
 
         //把扫码结果返回到MainActivity
         Intent intent = new Intent();
-        intent.putExtra("barCode", rawResult.getText());
+        intent.putExtra(SCAN_RESULT, rawResult.getText());
         setResult(RESULT_OK, intent);
         finish();
 
