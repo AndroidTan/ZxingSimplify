@@ -9,7 +9,7 @@
 
 Gradle
 ------
-本项目不提供gradle的maven仓，请参考usage中的使用方法。
+本项目不提供maven地址，请参考usage中的使用方法。
 ```
 // 如需通过maven仓依赖，请采用原作者的GitHub
 // dependencies {
