@@ -20,8 +20,8 @@ Gradle
 Usage
 -----
 
-* **1** 将代码中 zxing-simplify 目录作为module导入到AndroidStudio，并让应用依赖这个module即可。
-* **1** 具体调用方法参考MainActivity，只需申请相机使用权限，并启动CaptureActivity即可进行扫描。
+* 将代码中 zxing-simplify 目录作为module导入到AndroidStudio，并让应用依赖这个module即可。
+* 具体调用方法参考MainActivity，只需申请相机使用权限，并启动CaptureActivity即可进行扫描。
         动态权限申请的简单模板代码可参考 https://blog.csdn.net/tctaccount/article/details/84892228 
         或者[garyxt/android-permission-request-demo](https://github.com/garyxt/android-permission-request-demo)
 
