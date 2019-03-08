@@ -74,7 +74,7 @@ public class MainActivity extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == REQUEST_SCAN && resultCode == RESULT_OK){
-            Toast.makeText(mContext,data.getStringExtra("barCode"),Toast.LENGTH_LONG).show();
+            Toast.makeText(mContext,data.getStringExtra(CaptureActivity.SCAN_RESULT),Toast.LENGTH_LONG).show();
         }
     }
 }
