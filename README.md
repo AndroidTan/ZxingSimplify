@@ -18,7 +18,9 @@ dependencies {
 Usage
 -----
 
-Android 6.0以上在跳转到扫码页之前先取得运行时权限，具体参考MainActivity。
+* **1** 讲代码中 zxing-simplify 目录作为module导入到AndroidStudio，并让应用依赖这个module即可。
+* **1** 具体调用方法参考MainActivity，只需申请相机使用权限，并启动CaptureActivity即可进行扫描。
+        动态权限申请的简单模板代码可参考 https://blog.csdn.net/tctaccount/article/details/84892228 
 
 ```
     /**
@@ -32,13 +34,16 @@ Android 6.0以上在跳转到扫码页之前先取得运行时权限，具体参
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == REQUEST_SCAN && resultCode == RESULT_OK) {
-            Toast.makeText(mContext,data.getStringExtra("barCode"),Toast.LENGTH_LONG).show();
+            Toast.makeText(mContext,data.getStringExtra(CaptureActivity.SCAN_RESULT),Toast.LENGTH_LONG).show();
         }
     }
 ```
 
 Changelog
 -----
+* **1.0.5.1**
+    * 并未在maven上发版本，只是进行了代码小改。
+    * 扫描结果传递时的 key 改为常量代替，避免硬编码，降低module使用是的犯错率。
 
 * **1.0.5**
     * 增加从相册选取二维码识别功能
